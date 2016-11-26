@@ -1,0 +1,25 @@
+{
+  "name": "vim-mode-plus-exchange",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "vim-mode-plus-exchange:toggle"
+  },
+  "consumedServices": {
+      "vim-mode-plus": {
+        "versions": {
+          "^0.1.0": "consumeVim"
+        }
+      }
+    },
+  "repository": "https://github.com/atom/vim-mode-plus-exchange",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
