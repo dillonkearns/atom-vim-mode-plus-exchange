@@ -1,0 +1,7 @@
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'c x': 'vim-mode-plus-user:exchange'
+  'c x x': 'vim-mode-plus-user:exchange-line'
+  'c x c': 'vim-mode-plus:clear-persistent-selection'
+
+'atom-text-editor.vim-mode-plus.visual-mode':
+  'x': 'vim-mode-plus-user:exchange'

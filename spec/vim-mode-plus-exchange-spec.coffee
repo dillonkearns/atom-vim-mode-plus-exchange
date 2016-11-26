@@ -8,29 +8,39 @@ describe "vim-mode-plus-exchange", ->
   [set, ensure, keystroke, editor, editorElement, vimState] = []
 
   beforeEach ->
-    atom.keymaps.add "test",
-      'atom-text-editor.vim-mode-plus.normal-mode':
-        'x': 'vim-mode-plus-user:exchange'
-      , 100
+    waitsForPromise ->
+      atom.packages.activatePackage('vim-mode-plus-exchange')
 
-    # waitsForPromise ->
-    #   atom.packages.activatePackage('vim-mode-plus-exchange')
-
-    getVimState 'sample.txt', (state, vim) ->
+    getVimState (state, vimEditor) ->
       vimState = state
-      {editor, editorElement} = state
-      {set, ensure, keystroke} = vim
+      {editor, editorElement} = vimState
+      {set, ensure, keystroke} = vimEditor
 
   describe "exchange", ->
 
-    getEnsureRowText = (row, cursor) ->
-      (_keystroke, rowText) ->
-        keystroke _keystroke
-        expect(editor.lineTextForBufferRow(row)).toBe rowText
-        ensure cursor: cursor
-
     it "swaps two words", ->
-      set cursor: (point = [1, 0])
-      ensureRowText = getEnsureRowText(0, point)
+      set
+        text: "Pass the salt and pepper!"
+        cursor: [0, 0]
+      ensure '2 w c x i w 2 w c x i w',
+        text: "Pass the pepper and salt!", mode: "normal", cursor: [0, 18]
 
-      ensureRowText 'l', 'Pass the salt and pepper!'
+    it "clears selection", ->
+      set
+        text: "Pass the salt and pepper!"
+        cursor: [0, 0]
+      ensure '2 w c x i w c x c',
+        text: "Pass the salt and pepper!", mode: "normal", cursor: [0, 9]
+      ensure '2 w c x i w',
+        text: "Pass the salt and pepper!", mode: "normal", cursor: [0, 18]
+      ensure '2 b c x i w',
+        text: "Pass the pepper and salt!", mode: "normal", cursor: [0, 9]
+
+    it "supports the dot command", ->
+      set
+        text: "Pass the salt and pepper!"
+        cursor: [0, 0]
+      ensure '2 w c x i w',
+        text: "Pass the salt and pepper!", mode: "normal", cursor: [0, 9]
+      ensure '2 w .',
+        text: "Pass the pepper and salt!", mode: "normal", cursor: [0, 18]

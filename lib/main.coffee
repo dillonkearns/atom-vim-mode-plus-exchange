@@ -11,3 +11,10 @@ module.exports =
 
   subscribe: (args...) ->
     @subscriptions.add args...
+
+  consumeVim: ->
+    {Exchange, ExchangeLine} = require "./exchange"
+    @subscribe(
+      Exchange.registerCommand(),
+      ExchangeLine.registerCommand()
+    )

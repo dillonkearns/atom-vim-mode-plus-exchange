@@ -2,12 +2,12 @@
   "name": "vim-mode-plus-exchange",
   "main": "./lib/main",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Exchange two areas of text like vim-exchange.",
   "keywords": [
+    "vim",
+    "exchange",
+    "swap"
   ],
-  "activationCommands": {
-    "atom-workspace": "vim-mode-plus-exchange:toggle"
-  },
   "consumedServices": {
       "vim-mode-plus": {
         "versions": {
