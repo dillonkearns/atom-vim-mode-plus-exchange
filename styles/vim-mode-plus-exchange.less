@@ -4,5 +4,8 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.vim-mode-plus-exchange {
+atom-text-editor.exchange-pending, atom-text-editor.exchange-pending::shadow {
+  .vim-mode-plus-persistent-selection .region {
+    background-color: fadeout(red, 60%);
+  }
 }
