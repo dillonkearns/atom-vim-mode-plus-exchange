@@ -1,7 +1,7 @@
 {
   "name": "vim-mode-plus-exchange",
   "main": "./lib/main",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Exchange two areas of text like vim-exchange.",
   "keywords": [
     "vim",
@@ -9,17 +9,16 @@
     "swap"
   ],
   "consumedServices": {
-      "vim-mode-plus": {
-        "versions": {
-          "^0.1.0": "consumeVim"
-        }
+    "vim-mode-plus": {
+      "versions": {
+        "^0.1.0": "consumeVim"
       }
-    },
+    }
+  },
   "repository": "https://github.com/dillonkearns/atom-vim-mode-plus-exchange",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
