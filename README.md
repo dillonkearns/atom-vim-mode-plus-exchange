@@ -2,11 +2,11 @@
 
 A port of Tom McDonald's [vim-exchange](https://github.com/tommcdo/vim-exchange).
 
-![Exchange demo](./exchange-demo.gif)
+![Exchange demo](https://raw.githubusercontent.com/dillonkearns/atom-vim-mode-plus-exchange/master/exchange-demo.gif)
 
 Notice that the `.` command can be used to mark a second area for the exchange using the same {motion} as the first.
 
-![Exchange demo](./exchange-demo2.gif)
+![Exchange demo](https://raw.githubusercontent.com/dillonkearns/atom-vim-mode-plus-exchange/master/exchange-demo2.gif)
 
 `cxx` marks a line to be exchanged. In visual-mode, `x` marks the selection to be exchanged.
 
