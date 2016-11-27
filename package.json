@@ -15,7 +15,7 @@
         }
       }
     },
-  "repository": "https://github.com/dillon/atom-vim-mode-plus-exchange",
+  "repository": "https://github.com/dillonkearns/atom-vim-mode-plus-exchange",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
