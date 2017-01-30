@@ -4,7 +4,9 @@ A port of Tom McDonald's [vim-exchange](https://github.com/tommcdo/vim-exchange)
 
 ![Exchange demo](https://raw.githubusercontent.com/dillonkearns/atom-vim-mode-plus-exchange/master/exchange-demo.gif)
 
-Notice that the `.` command can be used to mark a second area for the exchange using the same {motion} as the first.
+*Note* Package requires [vim-mode-plus](atom.io/packages/vim-mode-plus)
+
+`cx{motion}` sets the first area for the exchange (or initiates it once ). Notice that the `.` command can be used to mark a second area for the exchange using the same {motion} as the first.
 
 ![Exchange demo](https://raw.githubusercontent.com/dillonkearns/atom-vim-mode-plus-exchange/master/exchange-demo2.gif)
 
