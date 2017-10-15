@@ -8,6 +8,12 @@
     "exchange",
     "swap"
   ],
+  "activationCommands": {
+    "atom-text-editor": [
+      "vim-mode-plus-user:exchange",
+      "vim-mode-plus-user:exchange-line"
+    ]
+  },
   "consumedServices": {
     "vim-mode-plus": {
       "versions": {

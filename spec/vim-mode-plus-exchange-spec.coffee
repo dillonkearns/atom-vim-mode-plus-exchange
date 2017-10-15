@@ -9,7 +9,10 @@ describe "vim-mode-plus-exchange", ->
 
   beforeEach ->
     waitsForPromise ->
-      atom.packages.activatePackage('vim-mode-plus-exchange')
+      activationPromise = atom.packages.activatePackage('vim-mode-plus-exchange')
+      atom.workspace.open().then (editor) ->
+        atom.commands.dispatch(editor.element, "vim-mode-plus-user:exchange")
+      activationPromise
 
     getVimState (state, vimEditor) ->
       vimState = state
